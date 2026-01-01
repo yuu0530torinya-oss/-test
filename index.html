@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighborhood Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Creative Pop-up</p>
+      <h1>街角から始まる、小さなクリエイティブ。</h1>
+      <p class="lead">空き店舗をリノベーションした“Neighborhood Studio”では、週末マルシェから配信イベントまで、みんなで楽しめる企画を育てています。</p>
+      <div class="hero__actions">
+        <a class="button primary" href="#program">最新の企画を見る</a>
+        <a class="button ghost" href="#visit">見学の予約</a>
+      </div>
+      <div class="hero__tags">
+        <span>音楽ライブ</span>
+        <span>ワークショップ</span>
+        <span>コーヒースタンド</span>
+        <span>アート展示</span>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="orb orb--primary"></div>
+      <div class="orb orb--secondary"></div>
+      <div class="card-grid">
+        <div class="card">夜カフェ&配信</div>
+        <div class="card">デザイン相談会</div>
+        <div class="card">アナログレコード市</div>
+        <div class="card">ご近所シネマ</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="program">
+      <div class="section__head">
+        <p class="eyebrow">Program</p>
+        <h2>この春のおすすめ</h2>
+        <p class="description">季節限定のポップアップと、レギュラー開催の人気イベントをまとめました。予約リンクからそのまま申し込みできます。</p>
+      </div>
+      <div class="grid">
+        <article class="tile">
+          <div class="tile__header">
+            <span class="pill">5/12 - 5/14</span>
+            <span class="status status--live">残席わずか</span>
+          </div>
+          <h3>夜風シネマ with バル</h3>
+          <p>ガレージ壁をスクリーンにした屋外映画館。DJのチルアウトセットと地元バルのフィンガーフード付き。</p>
+          <div class="meta">
+            <span>金曜 19:30</span>
+            <span>¥2,000 (1ドリンク)</span>
+          </div>
+          <a class="link" href="#">予約する →</a>
+        </article>
+        <article class="tile">
+          <div class="tile__header">
+            <span class="pill">毎週 土曜</span>
+            <span class="status status--open">空席あり</span>
+          </div>
+          <h3>クラフト朝市 &amp; ワークショップ</h3>
+          <p>器、ドライフラワー、焼き菓子など、作り手が直接販売。小一時間のミニ・ワークショップも参加できます。</p>
+          <div class="meta">
+            <span>9:00 - 13:00</span>
+            <span>入場無料</span>
+          </div>
+          <a class="link" href="#">出店を相談する →</a>
+        </article>
+        <article class="tile">
+          <div class="tile__header">
+            <span class="pill">5/27</span>
+            <span class="status status--new">NEW</span>
+          </div>
+          <h3>アナログ音盤ナイト</h3>
+          <p>レコード愛好家たちが持ち寄るリスニングパーティー。PA完備、持ち込み歓迎。終演後はプレイリストを配信。</p>
+          <div class="meta">
+            <span>土曜 18:00</span>
+            <span>¥1,500</span>
+          </div>
+          <a class="link" href="#">DJ枠を申し込む →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="visit">
+      <div class="section__head">
+        <p class="eyebrow">Visit</p>
+        <h2>予約 &amp; アクセス</h2>
+        <p class="description">見学や企画相談は30分から、夜の貸切もご対応します。オンライン内覧もOK。</p>
+      </div>
+      <div class="grid grid--split">
+        <div class="panel">
+          <h3>見学を予約する</h3>
+          <form class="form" action="#">
+            <label>
+              お名前
+              <input type="text" name="name" placeholder="山田太郎" required>
+            </label>
+            <label>
+              希望日時
+              <input type="datetime-local" name="datetime" required>
+            </label>
+            <label>
+              相談内容
+              <textarea name="message" rows="3" placeholder="配信イベントを開催したい"></textarea>
+            </label>
+            <button class="button primary" type="submit">送信する</button>
+          </form>
+        </div>
+        <div class="panel info">
+          <div class="info__row">
+            <span class="label">場所</span>
+            <span class="value">東京都 中央区○○ 1-2-3</span>
+          </div>
+          <div class="info__row">
+            <span class="label">営業時間</span>
+            <span class="value">平日 12:00-20:00 / 土曜 9:00-21:00</span>
+          </div>
+          <div class="info__row">
+            <span class="label">設備</span>
+            <span class="value">Wi-Fi, 4Kカメラ, 照明, サウンドシステム, コーヒーバー</span>
+          </div>
+          <div class="map-placeholder" aria-hidden="true">Map placeholder</div>
+          <p class="note">※ 申込後にGoogleマップのリンクと詳細をお送りします。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section__head">
+        <p class="eyebrow">FAQ</p>
+        <h2>よくある質問</h2>
+      </div>
+      <div class="accordion" role="list">
+        <button class="accordion__item" aria-expanded="false">
+          <span>機材を持ち込んでもいいですか？</span>
+          <span class="chevron">⌄</span>
+          <p class="answer">はい。安全確認のため事前にワット数と台数をお知らせください。電源とWi-Fiは自由にご利用いただけます。</p>
+        </button>
+        <button class="accordion__item" aria-expanded="false">
+          <span>飲食の持ち込みは可能ですか？</span>
+          <span class="chevron">⌄</span>
+          <p class="answer">飲食物の持ち込みもOKです。アルコールを提供する場合は事前にご相談ください。</p>
+        </button>
+        <button class="accordion__item" aria-expanded="false">
+          <span>近隣への音漏れ対策は？</span>
+          <span class="chevron">⌄</span>
+          <p class="answer">二重サッシと可搬型の吸音パネルを常備しています。ライブやDJイベントは21時までに終了をお願いしています。</p>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div>
+        <p class="eyebrow">Neighborhood Studio</p>
+        <p class="muted">ご近所の人も、旅人も、誰もが立ち寄れるクリエイティブハブを目指しています。</p>
+      </div>
+      <div class="footer__links">
+        <a href="#program">イベント</a>
+        <a href="#visit">アクセス</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__cta">
+        <p class="muted">最新情報はニュースレターでお届け。</p>
+        <div class="newsletter">
+          <input type="email" placeholder="you@example.com" aria-label="メールアドレス">
+          <button class="button primary" type="button">登録</button>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2024 Neighborhood Studio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
