@@ -1,20 +1,60 @@
-import React, { useEffect, useMemo, useState } from "https://esm.sh/react@18.2.0";
-import { createRoot } from "https://esm.sh/react-dom@18.2.0/client";
-import {
-  Sparkles,
-  Star,
-  Users,
-  Handshake,
-  TrendingUp,
-  Archive,
-  Crown,
-  Wrench,
-  ArrowRight,
-  RefreshCw,
-  BarChart,
-  CheckCircle,
-  Smartphone,
-} from "https://esm.sh/lucide-react@0.381.0?dev";
+const {
+  useEffect,
+  useMemo,
+  useState,
+} = React;
+
+// --- Minimal icon set (simple inline SVGs to avoid external deps)
+const makeIcon = (paths) => ({ size = 24, strokeWidth = 2, ...rest }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+    {...rest}
+  >
+    {paths}
+  </svg>
+);
+
+const Sparkles = makeIcon([
+  <path key="1" d="M12 3v4" />, <path key="2" d="M14 5h-4" />, <path key="3" d="M7 9l2 2-2 2-2-2 2-2Z" />, <path key="4" d="m17 11 3 3-3 3-3-3 3-3Z" />,
+]);
+const Star = makeIcon(<polygon points="12 2 14.9 8.6 22 9.2 16.5 13.9 18.2 21 12 17.2 5.8 21 7.5 13.9 2 9.2 9.1 8.6 12 2" />);
+const Users = makeIcon([
+  <circle key="1" cx="9" cy="7" r="3" />, <circle key="2" cx="17" cy="9" r="2.5" />, <path key="3" d="M4 19c1.2-2.4 3-4 5.5-4s4.3 1.6 5.5 4" />, <path key="4" d="M14.5 19c.5-1.6 1.6-3 3.3-3 1 0 1.9.4 2.7 1.1" />,
+]);
+const Handshake = makeIcon([
+  <path key="1" d="M3 12 8 7l4 4 4-4 5 5" />, <path key="2" d="M8 17 6 15" />, <path key="3" d="M10 17 8 15" />, <path key="4" d="M12 17 10 15" />, <path key="5" d="M14 15 16 17" />, <path key="6" d="M4 8h3" />, <path key="7" d="M17 8h3" />,
+]);
+const TrendingUp = makeIcon(<polyline points="3 17 9 11 13 15 21 7" />);
+const Archive = makeIcon([
+  <rect key="1" x="3" y="4" width="18" height="4" rx="1" />, <path key="2" d="M5 8v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8" />, <path key="3" d="M10 12h4" />,
+]);
+const Crown = makeIcon([
+  <path key="1" d="M3 8 7 5l5 6 5-6 4 3-2 9H5L3 8Z" />, <path key="2" d="M8 14h8" />,
+]);
+const Wrench = makeIcon([
+  <path key="1" d="M21 16.8a4 4 0 0 1-5.8-5L10 6l2-2 5.2 5.2a4 4 0 0 1 3.8 7.6Z" />, <path key="2" d="m7 11-5 5 3 3 5-5" />,
+]);
+const ArrowRight = makeIcon(<path d="M5 12h14m-6-6 6 6-6 6" />);
+const RefreshCw = makeIcon([
+  <polyline key="1" points="23 4 23 10 17 10" />, <polyline key="2" points="1 20 1 14 7 14" />, <path key="3" d="M3.51 9a9 9 0 0 1 14.86-3.36L23 10M1 14l4.63 4.63A9 9 0 0 0 20.49 15" />,
+]);
+const BarChart = makeIcon([
+  <rect key="1" x="3" y="9" width="4" height="12" rx="1" />, <rect key="2" x="10" y="3" width="4" height="18" rx="1" />, <rect key="3" x="17" y="13" width="4" height="8" rx="1" />,
+]);
+const CheckCircle = makeIcon([
+  <circle key="1" cx="12" cy="12" r="10" />, <path key="2" d="m9 12 2 2 4-5" />,
+]);
+const Smartphone = makeIcon([
+  <rect key="1" x="7" y="3" width="10" height="18" rx="2" />, <path key="2" d="M11 7h2" />, <path key="3" d="M12 17.5v.01" />,
+]);
 
 // ==========================================
 // 画像設定エリア（必要なら差し替え）
@@ -711,5 +751,5 @@ function WealthDynamics8ProfileDiagnosis() {
   );
 }
 
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<WealthDynamics8ProfileDiagnosis />);

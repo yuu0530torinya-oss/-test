@@ -4,7 +4,7 @@ React + Tailwind CDNで動くシングルページの診断ツールです。12�
 
 ## 表示方法
 
-依存関係のインストールは不要です。ローカルでHTTPサーバーを立ててアクセスしてください。
+依存関係のインストールは不要です。ローカルでHTTPサーバーを立ててアクセスしてください（React/Babel/TailwindはCDN経由で読み込みます）。
 
 ```bash
 python -m http.server 8000
